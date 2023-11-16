@@ -11,7 +11,6 @@ def nettoyer_chaine(chaine):
     except UnicodeEncodeError:
         return chaine
 
-
 with open('countries.csv', 'r', encoding='latin-1') as fichier_entree:
     lecteur_csv = csv.reader(fichier_entree)
     entetes = next(lecteur_csv)

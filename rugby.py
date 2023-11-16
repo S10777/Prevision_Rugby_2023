@@ -20,6 +20,7 @@ with open('rugby dataset.csv', 'r', encoding='latin-1') as fichier_entree:
         ligne_propre = [nettoyer_chaine(champ) for champ in ligne]
         lignes_propres.append(ligne_propre)
 
+
 with open('rugbydataset_propres.csv', 'w', encoding='utf-8', newline='') as fichier_sortie:
     ecrivain_csv = csv.writer(fichier_sortie)
     ecrivain_csv.writerow(entetes)

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simulateur de Match de Rugby</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Simulateur de Match de Rugby</h1>
+        <form action="/simulate" method="post">
+            <div class="form-group">
+                <select id="home_team" name="home_team" required>
+                    <option value="France">France</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="Wales">Wales</option>
+                    <option value="England">England</option>
+                    <option value="Scotland">Scotland</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="South Africa">South Africa</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select id="away_team" name="away_team" required>
+                    <option value="France">France</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="Wales">Wales</option>
+                    <option value="England">England</option>
+                    <option value="Scotland">Scotland</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="South Africa">South Africa</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="temperature">Température (°C) :</label>
+                <input type="number" id="temperature" name="temperature" required>
+            </div>
+            <div class="form-group">
+                <label for="precipitation">Précipitation (mm) :</label>
+                <input type="number" id="precipitation" name="precipitation" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Start">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

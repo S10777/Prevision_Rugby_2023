@@ -14,6 +14,7 @@ print(df_pays.columns)
 print("\nColonnes de df_meteo :")
 print(df_meteo.columns)
 
+
 df_complet = df_villes.merge(df_pays, left_on='country', right_on='home_team', how='inner')
 
 df_complet = df_matchs.merge(df_complet, left_on='city_name', right_on='city', how='inner')

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Résultat du Match</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Résultat du Match</h1>
+        {% if winner %}
+            <p>{{ winner }} WIN</p>
+        {% else %}
+            <p>MATCH NUL</p>
+        {% endif %}
+        <p><a href="/" class="button return-button">Retour</a></p>
+    </div>
+</body>
+</html>
+    
